@@ -8,11 +8,22 @@
 
 import UIKit
 
+#if PRO
+let SERVER_URL = "https://live.demo.com"
+#elseif Staging
+let SERVER_URL = "https://staging.demo.com"
+#else
+let SERVER_URL = "https://demo.com"
+#endif
+
+
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(SERVER_URL)
     }
 
 
