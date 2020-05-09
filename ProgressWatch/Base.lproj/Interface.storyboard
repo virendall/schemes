@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ProgressWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="Xbd-w1-r2c">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="ONL-sC-U9j">
+                                    <items>
+                                        <group alignment="left" layout="overlap" id="ghK-NY-5YT">
+                                            <items>
+                                                <imageView alignment="left" image="background" id="iiH-DM-sYf">
+                                                    <color key="tintColor" red="0.89803921568627454" green="0.0" blue="0.070588235294117646" alpha="0.2984154929577465" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <imageView alignment="left" image="progress40" id="it8-UO-stw">
+                                                    <color key="tintColor" red="0.89803921568627454" green="0.0" blue="0.070588235294117646" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="center" verticalAlignment="center" text="40%" id="trJ-56-0YU"/>
+                                            </items>
+                                        </group>
+                                        <button width="1" alignment="left" hidden="YES" title="Animate me" id="aXn-PD-pI2">
+                                            <connections>
+                                                <action selector="animateProgress" destination="AgC-eL-Hgc" id="GPR-lQ-GwR"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" hidden="YES" layout="vertical" id="WB3-kU-4tk">
+                                    <items>
+                                        <group alignment="left" layout="overlap" id="TT4-XA-DAb">
+                                            <items>
+                                                <imageView alignment="left" image="background" id="b7y-5p-6Od">
+                                                    <color key="tintColor" red="0.95294117647058818" green="0.58823529411764708" blue="0.0" alpha="0.29558208626760563" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <imageView alignment="left" image="progress0" id="kHh-fZ-Nh8">
+                                                    <color key="tintColor" red="0.95294117647058818" green="0.58823529411764708" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label alignment="center" verticalAlignment="center" text="80%" id="v9f-Mt-Gfg"/>
+                                            </items>
+                                        </group>
+                                        <button width="1" alignment="left" title="Animate me" id="0sF-QJ-iHN">
+                                            <connections>
+                                                <action selector="animateProgress1" destination="AgC-eL-Hgc" id="PhR-ko-Htw"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="progress" destination="it8-UO-stw" id="tWX-rL-fje"/>
+                        <outlet property="progress1" destination="kHh-fZ-Nh8" id="hdZ-cf-C54"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="150" height="150"/>
+        <image name="progress0" width="150" height="150"/>
+        <image name="progress40" width="150" height="150"/>
+    </resources>
+</document>
